@@ -1,6 +1,6 @@
 {
   "name": "nullthrows",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "flow typed nullthrows",
   "keywords": [
     "assert",
