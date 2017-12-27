@@ -6,22 +6,31 @@
     "assert",
     "flow",
     "invariant",
-    "nullthrows"
+    "nullthrows",
+    "typescript"
   ],
   "license": "MIT",
   "author": "Andres Suarez <zertosh@gmail.com>",
+  "contributors": [
+    "makepost <makepost@firemail.cc>"
+  ],
   "files": [
+    "nullthrows.d.ts",
     "nullthrows.js",
     "nullthrows.js.flow"
   ],
-  "main": "nullthrows.js",
+  "main": "nullthrows",
+  "types": "nullthrows",
   "repository": "https://github.com/zertosh/nullthrows",
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "tap test/*.js && tsc && tslint -p ."
   },
   "dependencies": {},
   "devDependencies": {
+    "dtslint": "^0.2.0",
     "flow-bin": "0.30.0",
-    "tap": "^6.2.0"
+    "tap": "^6.2.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.2"
   }
 }
