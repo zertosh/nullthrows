@@ -23,7 +23,7 @@
   "types": "nullthrows",
   "repository": "https://github.com/zertosh/nullthrows",
   "scripts": {
-    "test": "tap test/*.js && tsc && tslint -p ."
+    "test": "tap test/*.js && tsc"
   },
   "dependencies": {},
   "devDependencies": {
