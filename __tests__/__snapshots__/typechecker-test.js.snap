@@ -19,3 +19,12 @@ __tests__/__fixtures__/flow-package/index.js:10
 Found 2 errors
 "
 `;
+
+exports[`nullthrows with typescript 1`] = `""`;
+
+exports[`nullthrows with typescript 2`] = `
+"__tests__/__fixtures__/typescript-package/index.ts(9,5): error TS2322: Type 'string | null' is not assignable to type 'string'.
+  Type 'null' is not assignable to type 'string'.
+__tests__/__fixtures__/typescript-package/index.ts(11,5): error TS2322: Type 'string' is not assignable to type 'number'.
+"
+`;

@@ -11,10 +11,12 @@
   "license": "MIT",
   "author": "Andres Suarez <zertosh@gmail.com>",
   "files": [
+    "nullthrows.d.ts",
     "nullthrows.js",
     "nullthrows.js.flow"
   ],
   "main": "nullthrows.js",
+  "types": "nullthrows.d.ts",
   "repository": "https://github.com/zertosh/nullthrows",
   "scripts": {
     "test": "jest"
@@ -22,7 +24,8 @@
   "dependencies": {},
   "devDependencies": {
     "flow-bin": "0.33.0",
-    "jest": "22.1.4"
+    "jest": "22.1.4",
+    "typescript": "2.7.2"
   },
   "jest": {
     "testEnvironment": "node",

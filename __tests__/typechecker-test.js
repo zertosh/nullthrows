@@ -16,3 +16,17 @@ test('nullthrows with flow', () => {
   expect(ret.stdout).toMatchSnapshot();
   expect(ret.error).toBeUndefined();
 });
+
+test('nullthrows with typescript', () => {
+  const ret = child_process.spawnSync(
+    'node_modules/.bin/tsc',
+    ['--project', path.join(__dirname, '__fixtures__/typescript-package')],
+    {
+      cwd: path.join(__dirname, '..'),
+      encoding: 'utf8',
+    }
+  );
+  expect(ret.stderr).toMatchSnapshot();
+  expect(ret.stdout).toMatchSnapshot();
+  expect(ret.error).toBeUndefined();
+});
