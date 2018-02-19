@@ -1,6 +1,6 @@
 /* @flow */
 
-import nullthrows from '../..';
+import nullthrows from '../../..';
 
 var obj = ({}: ?Object);
 

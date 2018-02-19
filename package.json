@@ -17,11 +17,18 @@
   "main": "nullthrows.js",
   "repository": "https://github.com/zertosh/nullthrows",
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "jest"
   },
   "dependencies": {},
   "devDependencies": {
-    "flow-bin": "0.30.0",
-    "tap": "^6.2.0"
+    "flow-bin": "0.33.0",
+    "jest": "22.1.4"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "/__fixtures__/"
+    ],
+    "watchman": false
   }
 }

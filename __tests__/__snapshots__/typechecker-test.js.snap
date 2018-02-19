@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`nullthrows with flow 1`] = `""`;
+
+exports[`nullthrows with flow 2`] = `
+"__tests__/__fixtures__/flow-package/index.js:10
+ 10: var bad1: Object = obj;
+                        ^^^ null. This type is incompatible with
+ 10: var bad1: Object = obj;
+               ^^^^^^ object type
+
+__tests__/__fixtures__/flow-package/index.js:10
+ 10: var bad1: Object = obj;
+                        ^^^ undefined. This type is incompatible with
+ 10: var bad1: Object = obj;
+               ^^^^^^ object type
+
+
+Found 2 errors
+"
+`;
