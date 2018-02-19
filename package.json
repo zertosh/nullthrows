@@ -24,7 +24,7 @@
   "dependencies": {},
   "devDependencies": {
     "flow-bin": "0.33.0",
-    "jest": "22.1.4",
+    "jest": "^21.0.0",
     "typescript": "2.7.2"
   },
   "jest": {
