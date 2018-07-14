@@ -29,4 +29,8 @@ test('it throws', () => {
   expect(() => {
     nullthrows(undefined);
   }).toThrow(new Error('Got unexpected null or undefined'));
+
+  expect(() => {
+    nullthrows(undefined, 'My error message');
+  }).toThrow(new Error('My error message'));
 });
