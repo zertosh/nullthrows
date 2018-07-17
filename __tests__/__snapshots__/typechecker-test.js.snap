@@ -3,16 +3,16 @@
 exports[`nullthrows with flow 1`] = `""`;
 
 exports[`nullthrows with flow 2`] = `
-"__tests__/__fixtures__/flow-package/index.js:10
- 10: var bad1: Object = obj;
+"__tests__/__fixtures__/flow-package/index.js:11
+ 11: var bad1: Object = obj;
                         ^^^ null. This type is incompatible with
- 10: var bad1: Object = obj;
+ 11: var bad1: Object = obj;
                ^^^^^^ object type
 
-__tests__/__fixtures__/flow-package/index.js:10
- 10: var bad1: Object = obj;
+__tests__/__fixtures__/flow-package/index.js:11
+ 11: var bad1: Object = obj;
                         ^^^ undefined. This type is incompatible with
- 10: var bad1: Object = obj;
+ 11: var bad1: Object = obj;
                ^^^^^^ object type
 
 
@@ -23,8 +23,8 @@ Found 2 errors
 exports[`nullthrows with typescript 1`] = `""`;
 
 exports[`nullthrows with typescript 2`] = `
-"__tests__/__fixtures__/typescript-package/index.ts(9,5): error TS2322: Type 'string | null' is not assignable to type 'string'.
+"__tests__/__fixtures__/typescript-package/index.ts(10,5): error TS2322: Type 'string | null' is not assignable to type 'string'.
   Type 'null' is not assignable to type 'string'.
-__tests__/__fixtures__/typescript-package/index.ts(11,5): error TS2322: Type 'string' is not assignable to type 'number'.
+__tests__/__fixtures__/typescript-package/index.ts(12,5): error TS2322: Type 'string' is not assignable to type 'number'.
 "
 `;
