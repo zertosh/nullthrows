@@ -24,11 +24,11 @@ test('it does not throw', () => {
 test('it throws', () => {
   expect(() => {
     nullthrows(null);
-  }).toThrow(new Error('Got unexpected null or undefined'));
+  }).toThrow(new Error('Got unexpected null'));
 
   expect(() => {
     nullthrows(undefined);
-  }).toThrow(new Error('Got unexpected null or undefined'));
+  }).toThrow(new Error('Got unexpected undefined'));
 
   expect(() => {
     nullthrows(undefined, 'My error message');
