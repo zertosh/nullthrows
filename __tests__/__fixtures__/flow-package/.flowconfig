@@ -1,5 +1,8 @@
 [include]
 ../../..
 
+[ignore]
+.*/node_modules/.*
+
 [version]
 0.80.0
