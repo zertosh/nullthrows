@@ -3,20 +3,25 @@
 exports[`nullthrows with flow 1`] = `""`;
 
 exports[`nullthrows with flow 2`] = `
-"__tests__/__fixtures__/flow-package/index.js:11
- 11: var bad1: Object = obj;
-                        ^^^ null. This type is incompatible with
- 11: var bad1: Object = obj;
-               ^^^^^^ object type
+"Error --------------------------------------------------------------- __tests__/__fixtures__/flow-package/index.js:11:20
 
-__tests__/__fixtures__/flow-package/index.js:11
- 11: var bad1: Object = obj;
-                        ^^^ undefined. This type is incompatible with
- 11: var bad1: Object = obj;
-               ^^^^^^ object type
+Cannot assign \`obj\` to \`bad1\` because null or undefined [1] is incompatible with object type [2].
+
+   __tests__/__fixtures__/flow-package/index.js:11:20
+   11| var bad1: Object = obj;
+                          ^^^
+
+References:
+   __tests__/__fixtures__/flow-package/index.js:5:16
+    5| var obj = ({}: ?Object);
+                      ^^^^^^^ [1]
+   __tests__/__fixtures__/flow-package/index.js:11:11
+   11| var bad1: Object = obj;
+                 ^^^^^^ [2]
 
 
-Found 2 errors
+
+Found 1 error
 "
 `;
 

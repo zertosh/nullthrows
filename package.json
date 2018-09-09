@@ -23,9 +23,9 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "flow-bin": "0.33.0",
-    "jest": "^21.0.0",
-    "typescript": "2.7.2"
+    "flow-bin": "0.80.0",
+    "jest": "^23.5.0",
+    "typescript": "3.0.3"
   },
   "jest": {
     "testEnvironment": "node",
