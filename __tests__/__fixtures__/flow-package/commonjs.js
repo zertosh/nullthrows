@@ -1,6 +1,6 @@
 /* @flow */
 
-var nullthrows = require('../../..').default;
+var nullthrows = require('../../..');
 
 var obj = ({}: ?Object);
 

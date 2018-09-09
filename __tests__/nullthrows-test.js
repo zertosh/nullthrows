@@ -1,36 +1,78 @@
 'use strict';
 
-const nullthrows = require('../').default;
+describe('commonjs', () => {
+  const nullthrows = require('../');
 
-test('return value', () => {
-  const obj = {};
-  expect(nullthrows(obj)).toBe(obj);
+  test('return value', () => {
+    const obj = {};
+    expect(nullthrows(obj)).toBe(obj);
+  });
+
+  test('it does not throw', () => {
+    expect(() => {
+      nullthrows('');
+    }).not.toThrow();
+
+    expect(() => {
+      nullthrows(NaN);
+    }).not.toThrow();
+
+    expect(() => {
+      nullthrows(false);
+    }).not.toThrow();
+  });
+
+  test('it throws', () => {
+    expect(() => {
+      nullthrows(null);
+    }).toThrow(new Error('Got unexpected null'));
+
+    expect(() => {
+      nullthrows(undefined);
+    }).toThrow(new Error('Got unexpected undefined'));
+
+    expect(() => {
+      nullthrows(undefined, 'My error message');
+    }).toThrow(new Error('My error message'));
+  });
 });
 
-test('it does not throw', () => {
-  expect(() => {
-    nullthrows('');
-  }).not.toThrow();
+describe('import interop', () => {
+  const interopRequireDefault =
+    require('@babel/runtime-corejs2/helpers/interopRequireDefault.js');
 
-  expect(() => {
-    nullthrows(NaN);
-  }).not.toThrow();
+  const nullthrows = interopRequireDefault(require('../'));
 
-  expect(() => {
-    nullthrows(false);
-  }).not.toThrow();
-});
+  test('return value', () => {
+    const obj = {};
+    expect(nullthrows(obj)).toBe(obj);
+  });
 
-test('it throws', () => {
-  expect(() => {
-    nullthrows(null);
-  }).toThrow(new Error('Got unexpected null'));
+  test('it does not throw', () => {
+    expect(() => {
+      nullthrows('');
+    }).not.toThrow();
 
-  expect(() => {
-    nullthrows(undefined);
-  }).toThrow(new Error('Got unexpected undefined'));
+    expect(() => {
+      nullthrows(NaN);
+    }).not.toThrow();
 
-  expect(() => {
-    nullthrows(undefined, 'My error message');
-  }).toThrow(new Error('My error message'));
+    expect(() => {
+      nullthrows(false);
+    }).not.toThrow();
+  });
+
+  test('it throws', () => {
+    expect(() => {
+      nullthrows(null);
+    }).toThrow(new Error('Got unexpected null'));
+
+    expect(() => {
+      nullthrows(undefined);
+    }).toThrow(new Error('Got unexpected undefined'));
+
+    expect(() => {
+      nullthrows(undefined, 'My error message');
+    }).toThrow(new Error('My error message'));
+  });
 });
