@@ -23,6 +23,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@babel/runtime-corejs2": "^7.0.0",
     "flow-bin": "0.80.0",
     "jest": "^23.5.0",
     "typescript": "3.0.3"
