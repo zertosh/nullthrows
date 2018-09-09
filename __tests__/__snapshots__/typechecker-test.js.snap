@@ -3,25 +3,42 @@
 exports[`nullthrows with flow 1`] = `""`;
 
 exports[`nullthrows with flow 2`] = `
-"Error --------------------------------------------------------------- __tests__/__fixtures__/flow-package/index.js:11:20
+"Error ------------------------------------------------------------- __tests__/__fixtures__/flow-package/commonjs.js:7:20
 
 Cannot assign \`obj\` to \`bad1\` because null or undefined [1] is incompatible with object type [2].
 
-   __tests__/__fixtures__/flow-package/index.js:11:20
-   11| var bad1: Object = obj;
-                          ^^^
+   __tests__/__fixtures__/flow-package/commonjs.js:7:20
+   7| var bad1: Object = obj;
+                         ^^^
 
 References:
-   __tests__/__fixtures__/flow-package/index.js:5:16
-    5| var obj = ({}: ?Object);
-                      ^^^^^^^ [1]
-   __tests__/__fixtures__/flow-package/index.js:11:11
-   11| var bad1: Object = obj;
-                 ^^^^^^ [2]
+   __tests__/__fixtures__/flow-package/commonjs.js:5:16
+   5| var obj = ({}: ?Object);
+                     ^^^^^^^ [1]
+   __tests__/__fixtures__/flow-package/commonjs.js:7:11
+   7| var bad1: Object = obj;
+                ^^^^^^ [2]
+
+
+Error ------------------------------------------------------------- __tests__/__fixtures__/flow-package/esmodule.js:7:20
+
+Cannot assign \`obj\` to \`bad1\` because null or undefined [1] is incompatible with object type [2].
+
+   __tests__/__fixtures__/flow-package/esmodule.js:7:20
+   7| var bad1: Object = obj;
+                         ^^^
+
+References:
+   __tests__/__fixtures__/flow-package/esmodule.js:5:16
+   5| var obj = ({}: ?Object);
+                     ^^^^^^^ [1]
+   __tests__/__fixtures__/flow-package/esmodule.js:7:11
+   7| var bad1: Object = obj;
+                ^^^^^^ [2]
 
 
 
-Found 1 error
+Found 2 errors
 "
 `;
 
