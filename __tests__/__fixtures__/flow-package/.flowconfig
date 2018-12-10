@@ -4,5 +4,12 @@
 [ignore]
 .*/node_modules/.*
 
+[strict]
+nonstrict-import
+sketchy-null
+unclear-type
+untyped-import
+untyped-type-import
+
 [version]
-0.80.0
+0.87.0

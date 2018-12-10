@@ -37,8 +37,34 @@ References:
                 ^^^^^^ [2]
 
 
+Error --------------------------------------------------------------- __tests__/__fixtures__/flow-package/strict.js:7:20
 
-Found 2 errors
+Cannot assign \`value\` to \`bad1\` because null or undefined [1] is incompatible with number [2].
+
+   __tests__/__fixtures__/flow-package/strict.js:7:20
+   7| var bad1: number = value;
+                         ^^^^^
+
+References:
+   __tests__/__fixtures__/flow-package/strict.js:5:17
+   5| var value = (1: ?number);
+                      ^^^^^^^ [1]
+   __tests__/__fixtures__/flow-package/strict.js:7:11
+   7| var bad1: number = value;
+                ^^^^^^ [2]
+
+
+Error -------------------------------------------------------------- __tests__/__fixtures__/flow-package/strict.js:13:44
+
+Unclear type. Using \`any\`, \`Object\`, \`Function\`, \`$Subtype<...>\`, or \`$Supertype<...>\` types is not safe!
+(\`unclear-type\`)
+
+   13| (\\"this should be an error in strict mode\\": any);
+                                                  ^^^
+
+
+
+Found 4 errors
 "
 `;
 
